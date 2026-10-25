@@ -80,6 +80,11 @@ def apply_recipe(package: DocxPackage, root: ET.Element, recipe: dict) -> list[E
                               "レシピを作った原本と同じファイルか確かめてください。")
 
     shapes = _runs_with_docpr(root)
+    sample = recipe.get("図の見本", {}).get("id")
+    if sample is not None:
+        if sample not in shapes:
+            raise RecipeError(f"図の見本 id={sample} が原本にありません")
+        package.figure_sample = figure_sample(shapes[sample][0])
     for sid in recipe.get("取り除く図形", {}).get("id", []):
         if sid not in shapes:
             raise RecipeError(f"取り除く図形 id={sid} が原本にありません")
@@ -136,6 +141,18 @@ def apply_recipe(package: DocxPackage, root: ET.Element, recipe: dict) -> list[E
     drop_unused_media(package, root)
     drop_embedded_fonts(package)
     return paras
+
+
+def figure_sample(run: ET.Element) -> str:
+    """図を差し込むときの見本（原本の SVG＋PNG の画像の run）。画像の参照と説明は空ける。"""
+    run = copy.deepcopy(run)
+    for el in run.iter():
+        for key in list(el.attrib):
+            if key == f"{{{REL_NS}}}embed":
+                el.set(key, "PNG" if slotlib.local(el) == "blip" else "SVG")
+        if slotlib.local(el) in ("docPr", "cNvPr"):
+            el.set("descr", "")
+    return ET.tostring(run, encoding="unicode")
 
 
 def drop_unused_media(package: DocxPackage, root: ET.Element) -> None:
@@ -259,6 +276,8 @@ def main(argv: list[str] | None = None) -> int:
         "スロット別": {s.slot_id: s.local_spans for s in found if s.local_spans},
     })
     _dump(tdir / "defaults.json", {s.slot_id: s.text for s in found})
+    if getattr(package, "figure_sample", None):
+        (tdir / "figure.xml").write_text(package.figure_sample + "\n", encoding="utf-8")
     _dump(tdir / "regions.json", {
         "説明": "区画表。教材形式の JSON は、プリント名（①〜④）と区画名でこの表を引いて流し込む。"
                 "『見本』は行数を変えるときに写す段落、『行数固定』は図形と組になっていて行数を変えられない区画。",

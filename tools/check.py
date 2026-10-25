@@ -15,6 +15,7 @@
   △ 半角の括弧      ( ) が使われている（原本は全角が基本）
   △ 空の答え        {　} のように答えの中身が空白だけ
   △ 長い行          学習・脚問の行が 1 行（52 字）に収まらず折り返す
+  ✗ 図              図の画像（答えが赤字・_空欄・_黒 の 3 版）が無い、寸法の指定が無い
 """
 
 from __future__ import annotations
@@ -63,6 +64,17 @@ def check(path: Path) -> tuple[list[str], list[str]]:
         for region, value in regs.items():
             for k, line in enumerate(_lines(value), 1):
                 where = f"{sheet}・{region} {k} 行目"
+                if isinstance(line, dict):          # 図
+                    for suffix in ("", "_空欄", "_黒"):
+                        png = ROOT / Path(line.get("図", "")).with_suffix("")
+                        png = png.with_name(png.name + suffix + ".png")
+                        if not png.exists():
+                            errors.append(f"✗ 図  {where}: {png.relative_to(ROOT)} がありません"
+                                          "（figures/…/make_figures.py で作る）")
+                    for key in ("行", "幅", "高さ"):
+                        if key not in line:
+                            errors.append(f"✗ 図  {where}: 「{key}」がありません")
+                    continue
                 try:
                     text = markup.plain(line)
                 except markup.MarkupError as e:
@@ -88,7 +100,7 @@ def check(path: Path) -> tuple[list[str], list[str]]:
                 if region in ("学習", "脚問") and len(text) > LINE_CHARS:
                     notes.append(f"△ 長い行  {where}: {len(text)} 字（折り返して 2 行分になります）")
             if region == "段落表":
-                table_rows = [markup.plain(x) for x in _lines(value)]
+                table_rows = [markup.plain(x) for x in _lines(value) if isinstance(x, str)]
             if region == "段見出し":
                 m = RANGE_RE.search(markup.plain(_lines(value)[0]))
                 if m:

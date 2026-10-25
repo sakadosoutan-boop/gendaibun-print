@@ -11,12 +11,15 @@
 - 縦書きでは、横位置が「段組（column）基準」の図形は錨の段落の行からの距離で置かれる。錨を別の段落へ移すときは、レシピの「位置を固定」で余白・ページ基準に置き直す。
 - ページの頭は空行の数ではなく「段落前で改ページ」でそろえる。
 - 原本 docx（図版を含む）・指導書 PDF・埋め込みフォントはリポジトリに入れない。
+- 図解・挿絵は `figures/<教材>/make_figures.py`（部品は `tools/zukai.py`）で描き、教材データの区画の行に `{"図": …, "行": N, "幅": …, "高さ": …}` で入れる。答えの字は `ans()`／`mixed()` で書く（赤字・空欄・黒の 3 版になる）。図の幅は空けた行の字面だけの幅（①② 6.2mm／行、③④ 4.1mm／行）に収める。
+- 紙面に収まるかは build の「横幅」（行の幅 1.39em で見積もり、266mm 以内）で見る。
 - 新しい教材を書いたら `python3 tools/check.py data/○○.json` で、前の教材の文言が残っていないか確かめる。
 
 ## 構成
-- `src/gendaiprint/` … docxpkg（入出力）/ rpr（書式差分・名前付き書式）/ markup（記法）/ slots（目印・流し込み）/ regions（区画の行数増減）/ volume（分量見積もり）
-- `src/build.py` … 教材データ＋テンプレート → docx（分量チェック・解答表示の切り替え付き）
-- `tools/` … make_template（原本＋レシピ→テンプレート）/ check（表記チェック）
+- `src/gendaiprint/` … docxpkg（入出力）/ rpr（書式差分・名前付き書式）/ markup（記法）/ slots（目印・流し込み）/ regions（区画の行数増減）/ volume（分量と横幅の見積もり）/ figures（図の差し込み）
+- `src/build.py` … 教材データ＋テンプレート → docx（横幅の見積もり・図の差し込み・解答表示の切り替え付き）
+- `tools/` … make_template（原本＋レシピ→テンプレート）/ check（表記チェック）/ zukai（図解・挿絵の SVG 部品）
+- `figures/<教材>/` … make_figures.py と、描いた図（SVG・PNG、_空欄・_黒 の版）
 
 ## 検証コマンド
 | コマンド | 内容 |
@@ -24,7 +27,7 @@
 | `python3 tests/verify.py` | 一式（LibreOffice と poppler があればページ画像を比較） |
 | `python3 tools/check.py data/*.json` | 表記チェック |
 
-LibreOffice のページ割り・行送りは Word の目安にならない（UD デジタル教科書体が無いため）。紙面に収まるかは build の「分量」で見る。
+LibreOffice のページ割り・行送りは Word の目安にならない（UD デジタル教科書体が無いため。図も後ろの行にかぶって見える）。紙面に収まるかは build の「横幅」で見る。
 
 ## コミット規約
 `feat:` / `fix:` / `docs:` / `chore:` ＋日本語要約。

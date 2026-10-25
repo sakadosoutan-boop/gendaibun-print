@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55.0mm" height="145.0mm" viewBox="0 0 550 1450">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="275.0" y="45.1" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="28" text-anchor="middle" fill="#000000" font-weight="bold">痛みはだれのもの？</text>
+<line x1="40.0" y1="62.0" x2="510.0" y2="62.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<rect x="335.0" y="92.0" width="150.0" height="56.0" rx="28.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<path d="M404.0,148.0 L410.0,164.0 L416.0,148.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="403.0" y="145.0" width="14" height="3" fill="#FFFFFF"/>
+<text x="410.0" y="129.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">痛い！</text>
+<circle cx="410.0" cy="195.0" r="16.1" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M387.0,275.5 L387.0,229.5 Q387.0,215.7 400.8,215.7 L419.2,215.7 Q433.0,215.7 433.0,229.5 L433.0,275.5 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="399.6" y1="275.5" x2="399.6" y2="316.9" stroke="#000000" stroke-width="5.6" stroke-linecap="round"/>
+<line x1="420.4" y1="275.5" x2="420.4" y2="316.9" stroke="#000000" stroke-width="5.6" stroke-linecap="round"/>
+<path d="M387.0,231.8 Q400.8,257.1 416.9,252.5" fill="none" stroke="#000000" stroke-width="5.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.2,241.0 l6.9,-4.6 l2.3,6.9 l8.0,-5.8" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M444.5,257.1 l6.9,-4.6 l2.3,6.9 l8.0,-5.8" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M437.6,273.2 l6.9,-4.6 l2.3,6.9 l8.0,-5.8" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M403.1,191.6 l4.6,2.3 M416.9,191.6 l-4.6,2.3 M404.2,203.1 q5.8,-4.6 11.5,0" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="410.0" y="369.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000" font-weight="bold">患者</text>
+<circle cx="130.0" cy="195.0" r="16.1" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M107.0,275.5 L107.0,229.5 Q107.0,215.7 120.8,215.7 L139.2,215.7 Q153.0,215.7 153.0,229.5 L153.0,275.5 Z" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="119.7" y1="275.5" x2="119.7" y2="316.9" stroke="#000000" stroke-width="5.6" stroke-linecap="round"/>
+<line x1="140.3" y1="275.5" x2="140.3" y2="316.9" stroke="#000000" stroke-width="5.6" stroke-linecap="round"/>
+<line x1="130.0" y1="215.7" x2="119.7" y2="241.0" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<line x1="130.0" y1="215.7" x2="140.3" y2="241.0" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M122.0,218.0 Q113.9,254.8 130.0,257.1 Q146.1,254.8 138.1,218.0" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="130.0" cy="259.4" r="4.6" fill="#000000"/>
+<text x="130.0" y="369.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000" font-weight="bold">医師</text>
+<rect x="25.0" y="415.0" width="210.0" height="110.0" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<rect x="98.5" y="527.0" width="63.0" height="8.0" rx="2" fill="#000000" stroke="#000000" stroke-width="1"/>
+<text x="130.0" y="463.0" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">データ上は</text>
+<text x="130.0" y="494.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">異常なし</text>
+<text x="400.0" y="448.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">間接的な</text>
+<text x="400.0" y="477.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">データから</text>
+<text x="400.0" y="507.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">痛みを判断</text>
+<line x1="275.0" y1="545.0" x2="275.0" y2="584.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M275.0,600.0 L266.2,584.0 L283.8,584.0 Z" fill="#000000"/>
+<rect x="40.0" y="610.0" width="470.0" height="110.0" rx="14" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="139.8" y="654.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">患者の感覚を</text>
+<text x="295.8" y="654.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">〔</text>
+<text x="410.2" y="654.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="end" fill="#000000">〕</text>
+<text x="353.0" y="654.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">否定</text>
+<text x="275.0" y="697.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">痛みを医師に取りあげられる</text>
+<line x1="275.0" y1="725.0" x2="275.0" y2="764.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M275.0,780.0 L266.2,764.0 L283.8,764.0 Z" fill="#000000"/>
+<rect x="250.0" y="789.0" width="230.0" height="52.0" rx="26.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<path d="M301.5,841.0 L293.5,857.0 L313.5,841.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="300.5" y="838.0" width="14" height="3" fill="#FFFFFF"/>
+<text x="365.0" y="822.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">先生に任せよう</text>
+<circle cx="215.0" cy="860.0" r="14.7" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M194.0,933.5 L194.0,891.5 Q194.0,878.9 206.6,878.9 L223.4,878.9 Q236.0,878.9 236.0,891.5 L236.0,933.5 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M200.3,933.5 L233.9,933.5 L233.9,960.8" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M212.9,933.5 L242.3,935.6 L242.3,960.8" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="165.8" y="1044.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000" font-weight="bold">医師への</text>
+<text x="269.8" y="1044.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">〔</text>
+<text x="384.2" y="1044.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="end" fill="#000000">〕</text>
+<text x="327.0" y="1044.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">依存</text>
+<line x1="275.0" y1="1065.0" x2="275.0" y2="1104.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M275.0,1120.0 L266.2,1104.0 L283.8,1104.0 Z" fill="#000000"/>
+<rect x="40.0" y="1130.0" width="470.0" height="210.0" rx="16" fill="#FFFFFF" stroke="#000000" stroke-width="5"/>
+<text x="275.0" y="1178.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">病人から</text>
+<text x="139.8" y="1229.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">苦しみを</text>
+<text x="243.8" y="1229.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">〔</text>
+<text x="358.2" y="1229.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="end" fill="#000000">〕</text>
+<text x="301.0" y="1229.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">受容</text>
+<text x="358.2" y="1229.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">する</text>
+<text x="275.0" y="1276.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">能力が奪われていく</text>
+<text x="150.2" y="1323.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000">依存性は</text>
+<text x="246.2" y="1323.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000">〔</text>
+<text x="375.8" y="1323.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="end" fill="#000000">〕</text>
+<text x="311.0" y="1323.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">無能力</text>
+<text x="375.8" y="1323.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000">へ</text>
+<text x="275.0" y="1412.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">※「自分の足で立つ」ことができない</text>
+</svg>

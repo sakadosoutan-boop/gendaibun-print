@@ -7,7 +7,8 @@
 1. 原本（環境変数 NUKUMI_DOCX）があれば、レシピからテンプレートを作り直して、
    リポジトリのテンプレートと同じになること。さらに「テンプレート＋原本の文言」が
    「原本にレシピを当てただけのもの」と 1 ドットも変わらないこと（LibreOffice があれば）
-2. 病と科学 が組めて、目印の取り残し・空のスロットが無く、分量が原本以下であること
+2. 病と科学 が組めて、目印の取り残し・空のスロットが無く、各ページの横幅の見積もりが
+   本文領域に収まること。図が 4 枚入り、配布用には答えを白字にした版の図が入ること
 3. --answers の各指定で、消えるべき色の文字が 0 字になること
 4. 表記チェックに ✗ が無いこと
 5. LibreOffice があれば、4 ページ（①〜④）に収まること（目安）
@@ -30,6 +31,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "tools"))
 
 import build  # noqa: E402
+from gendaiprint import figures as figlib  # noqa: E402
 import check  # noqa: E402
 import make_template  # noqa: E402
 
@@ -54,6 +56,23 @@ def coloured_chars(xml: str, colour: str) -> int:
         if f'w:val="{colour}"' in (re.search(r"<w:rPr>.*?</w:rPr>", run, re.S) or [""])[0]:
             count += sum(len(t.strip()) for t in re.findall(r"<w:t[^>]*>([^<]*)</w:t>", run))
     return count
+
+
+def figure_images(docx: Path) -> set[bytes]:
+    with zipfile.ZipFile(docx) as zf:
+        return {zf.read(n) for n in zf.namelist() if n.startswith("word/media/zukai")}
+
+
+def expected_images(mode: str) -> set[bytes]:
+    data = json.loads(DATA.read_text(encoding="utf-8"))
+    out = set()
+    for regions in data["sheets"].values():
+        for value in regions.values():
+            for item in value if isinstance(value, list) else [value]:
+                if figlib.is_figure(item):
+                    stem = ROOT / Path(item["図"]).with_suffix("")
+                    out.add(stem.with_name(stem.name + figlib.VARIANT[mode] + ".png").read_bytes())
+    return out
 
 
 def render(docx: Path, out: Path) -> list[Path] | None:
@@ -86,7 +105,7 @@ def main() -> int:
         ok(code == 0, "レシピが原本に当たる")
         ok(document(remade / "base.docx") == document(TEMPLATE / "base.docx"),
            "作り直したテンプレートがリポジトリのものと同じ")
-        for name in ("spans.json", "regions.json", "defaults.json"):
+        for name in ("spans.json", "regions.json", "defaults.json", "figure.xml"):
             ok((remade / name).read_text(encoding="utf-8") == (TEMPLATE / name).read_text(encoding="utf-8"),
                f"{name} が同じ")
         rebuilt = tmp / "nukumi_rebuilt.docx"
@@ -107,7 +126,12 @@ def main() -> int:
     ok(not report["missing"], "値の無いスロットが無い" + (f": {report['missing']}" if report["missing"] else ""))
     ok(not report["blank"], "空欄の区画が無い" + (f": {report['blank']}" if report["blank"] else ""))
     for name, (before, after) in report["amount"].items():
-        ok(after <= before, f"分量（{name}）が原本以下（{after:.0f}/{before:.0f} 行分）")
+        print(f"     分量（{name}）: 原本 {before:.0f} 行分 → {after:.0f} 行分（参考）")
+    limit = build.volume.PAGE_WIDTH_MM - build.volume.SAFETY_MM
+    for name, used in zip(report["amount"], report["widths"]):
+        ok(used <= limit, f"横幅（{name}）が本文領域に収まる（{used:.0f}／{limit:.0f}mm）")
+    ok(len(report.get("figures", [])) == 4, f"図が 4 枚入る（{len(report.get('figures', []))} 枚）")
+    ok(not report.get("warnings"), "図の幅・高さの警告が無い" + (f": {report.get('warnings')}" if report.get("warnings") else ""))
     ok("ぬくみ" not in xml, "前の教材の題名が残っていない")
 
     print("3. 解答の見せ方")
@@ -118,6 +142,7 @@ def main() -> int:
         build.build(DATA, path, mode)
         left = coloured_chars(document(path), gone)
         ok(left == 0, f"{mode}: {gone} の文字が 0 字（{left} 字）")
+        ok(figure_images(path) == expected_images(mode), f"{mode}: 図はこの見せ方の版（{figlib.VARIANT[mode] or '赤字'}）")
 
     print("4. 表記チェック")
     errors, notes = check.check(DATA)

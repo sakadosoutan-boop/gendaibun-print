@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.0mm" height="145.0mm" viewBox="0 0 410 1450">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="205.0" y="45.1" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="28" text-anchor="middle" fill="#000000" font-weight="bold">西洋医学の見方</text>
+<line x1="30.0" y1="62.0" x2="380.0" y2="62.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="205.0" cy="250.0" rx="185.0" ry="160.0" fill="#F4F4F4" stroke="#000000" stroke-width="3"/>
+<text x="205.0" y="135.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="30" text-anchor="middle" fill="#000000" font-weight="bold">病人</text>
+<circle cx="205.0" cy="175.0" r="14.0" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M185.0,245.0 L185.0,205.0 Q185.0,193.0 197.0,193.0 L213.0,193.0 Q225.0,193.0 225.0,205.0 L225.0,245.0 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="196.0" y1="245.0" x2="196.0" y2="281.0" stroke="#000000" stroke-width="5.0" stroke-linecap="round"/>
+<line x1="214.0" y1="245.0" x2="214.0" y2="281.0" stroke="#000000" stroke-width="5.0" stroke-linecap="round"/>
+<path d="M185.0,207.0 Q197.0,229.0 211.0,225.0" fill="none" stroke="#000000" stroke-width="5.0" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M233.0,215.0 l6.0,-4.0 l2.0,6.0 l7.0,-5.0" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M235.0,229.0 l6.0,-4.0 l2.0,6.0 l7.0,-5.0" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M229.0,243.0 l6.0,-4.0 l2.0,6.0 l7.0,-5.0" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M199.0,172.0 l4.0,2.0 M211.0,172.0 l-4.0,2.0 M200.0,182.0 q5.0,-4.0 10.0,0" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="205.0" y="337.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">感覚・苦しみ</text>
+<text x="205.0" y="369.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">個人差・生活</text>
+<line x1="15.0" y1="440.0" x2="395.0" y2="440.0" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-dasharray="10,7"/>
+<circle cx="20.8" cy="431.6" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<circle cx="20.8" cy="448.4" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<line x1="26.8" y1="435.2" x2="61.6" y2="447.2" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<line x1="26.8" y1="444.8" x2="61.6" y2="432.8" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<text x="245.0" y="479.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000" font-weight="bold">切り離し</text>
+<ellipse cx="205.0" cy="640.0" rx="185.0" ry="145.0" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="205.0" y="545.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="30" text-anchor="middle" fill="#000000" font-weight="bold">病気</text>
+<ellipse cx="205.0" cy="660.0" rx="100.0" ry="68.0" fill="#E6E6E6" stroke="#000000" stroke-width="3"/>
+<text x="205.0" y="652.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">測定・検査</text>
+<text x="205.0" y="684.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">できる症状</text>
+<line x1="205.0" y1="790.0" x2="205.0" y2="834.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M205.0,850.0 L196.2,834.0 L213.8,834.0 Z" fill="#000000"/>
+<text x="95.8" y="889.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">病気の</text>
+<text x="173.8" y="889.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">〔</text>
+<text x="288.2" y="889.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="end" fill="#000000">〕</text>
+<text x="231.0" y="889.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">数値</text>
+<text x="288.2" y="889.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">化</text>
+<rect x="55.0" y="925.0" width="300.0" height="150.0" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<rect x="160.0" y="1077.0" width="90.0" height="8.0" rx="2" fill="#000000" stroke="#000000" stroke-width="1"/>
+<text x="205.0" y="977.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">体温　36.8</text>
+<text x="205.0" y="1008.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">血圧　128／80</text>
+<text x="205.0" y="1039.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">血糖値　95</text>
+<line x1="205.0" y1="1095.0" x2="205.0" y2="1134.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M205.0,1150.0 L196.2,1134.0 L213.8,1134.0 Z" fill="#000000"/>
+<rect x="15.0" y="1160.0" width="380.0" height="210.0" rx="16" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="205.0" y="1207.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">答えられない部分は</text>
+<text x="205.0" y="1239.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">切り捨てられる</text>
+<text x="69.8" y="1309.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000" font-weight="bold">医学が</text>
+<text x="147.8" y="1309.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000">〔</text>
+<text x="262.2" y="1309.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="end" fill="#000000">〕</text>
+<text x="205.0" y="1309.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">人間</text>
+<text x="262.2" y="1309.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="start" fill="#000000" font-weight="bold">を排除</text>
+<text x="205.0" y="1412.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">※医学は万能という錯覚</text>
+</svg>

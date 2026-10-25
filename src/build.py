@@ -23,7 +23,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from gendaiprint import regions as regionlib, rpr, volume  # noqa: E402
+from gendaiprint import figures as figlib, regions as regionlib, rpr, volume  # noqa: E402
 from gendaiprint import slots as slotlib  # noqa: E402
 from gendaiprint.docxpkg import DocxPackage, w  # noqa: E402
 
@@ -59,14 +59,23 @@ def _recolour_spans(spans: dict[str, dict], mapping: dict[str, str] | None) -> d
     return out
 
 
-def lines_of(value) -> list[str]:
+def lines_of(value) -> tuple[list[str], list[tuple[int, dict]]]:
+    """区画の値を行の並びにする。図（{"図": …, "行": N}）は N 行の空行に開き、
+    (何行目か, 図の指定) を別に返す。"""
     if value is None:
-        return []
-    if isinstance(value, str):
-        return [value]
-    if not all(isinstance(v, str) for v in value):
-        raise BuildError(f"行は文字列の並びで書いてください: {value!r}")
-    return list(value)
+        return [], []
+    items = [value] if isinstance(value, (str, dict)) else list(value)
+    lines: list[str] = []
+    figs: list[tuple[int, dict]] = []
+    for item in items:
+        if isinstance(item, str):
+            lines.append(item)
+        elif figlib.is_figure(item):
+            figs.append((len(lines), item))
+            lines.extend([""] * max(1, int(item.get("行", 1))))
+        else:
+            raise BuildError(f"行として読めない値です: {item!r}")
+    return lines, figs
 
 
 def build(data_path: Path, out_path: Path, answers: str | None = None) -> dict:
@@ -93,6 +102,7 @@ def build(data_path: Path, out_path: Path, answers: str | None = None) -> dict:
     local: dict[str, dict] = dict(formats.get("スロット別", {}))
     values: dict[str, str] = {}
     report = {"resized": [], "padded": [], "blank": []}
+    placements: list[tuple[str, str, dict]] = []     # (区画, 錨にするスロット, 図の指定)
 
     if "slots" in payload:                       # スロット形式（原本の完全再現用）
         values = {s["id"]: s["text"] for s in payload["slots"]}
@@ -113,7 +123,7 @@ def build(data_path: Path, out_path: Path, answers: str | None = None) -> dict:
                 if region not in data:
                     report["blank"].append(label)
                     continue
-                lines = lines_of(data[region])
+                lines, figs = lines_of(data[region])
                 original = [defaults.get(i, "") for i in ids]
                 proto = sheet["見本"].get(region)
                 known_caps = [caps[i] for i in ids if i in caps]
@@ -130,12 +140,13 @@ def build(data_path: Path, out_path: Path, answers: str | None = None) -> dict:
                         tally[1] += sum(volume.columns(t, usual) for t in lines)
                     else:
                         tally[1] += sum(volume.columns(t, c) * k for t, c, k in zip(lines, per_line, weight))
-                    tally[1] += max(0, len(ids) - len(lines))     # 空行で取っておく分
+                    if proto is None:
+                        tally[1] += max(0, len(ids) - len(lines))     # 空行で取っておく分
                 if len(lines) > len(ids) and region in sheet["行数固定"]:
                     raise BuildError(f"「{label}」は図形と組になっているので {len(ids)} 行までです"
                                      f"（{len(lines)} 行あります）")
-                if len(lines) < len(ids):
-                    # 行が少ないときは空行で場所を取っておく（後ろの脚問や枠が寄ってこない）
+                if len(lines) < len(ids) and proto is None:
+                    # 書式の決まった区画（段落表・脚問など）は、行が少なければ空行で場所を取っておく
                     report["padded"].append(f"{label} {len(lines)}/{len(ids)} 行（残りは空行）")
                     lines = lines + [""] * (len(ids) - len(lines))
                 if lines != original and proto is not None:
@@ -151,12 +162,22 @@ def build(data_path: Path, out_path: Path, answers: str | None = None) -> dict:
                     ids = regionlib.resize(root, label, ids, len(lines))
                     report["resized"].append(f"{label} {len(ids)}→{len(lines)} 行")
                 values.update(zip(ids, lines))
+                placements += [(label, ids[k], spec) for k, spec in figs]
+
+    if placements:
+        inserter = figlib.Inserter(package, root, tdir, ROOT, mode)
+        located = slotlib.locate(root)
+        for label, sid, spec in placements:
+            inserter.place(located[sid][0], spec, label)
+        report["figures"] = [f"{label}: {Path(spec['図']).stem}（{spec['行']} 行）" for label, _, spec in placements]
+        report["warnings"] = inserter.warnings
 
     mapping = ANSWER_MODES[mode]
     spans = _recolour_spans({**formats.get("共通", {}), **payload.get("spans", {})}, mapping)
     local = {k: _recolour_spans(v, mapping) for k, v in local.items()}
     report["missing"] = slotlib.fill(root, values, spans, local, mapping)
     slotlib.recolour_opaque(root, mapping)
+    report["widths"] = volume.page_widths(root)
     package.set_document(root)
     package.save(out_path)
     report.update(mode=mode, amount=amount)
@@ -173,7 +194,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         report = build(Path(args.data), Path(args.out), args.answers)
-    except (BuildError, regionlib.RegionError, KeyError) as e:
+    except (BuildError, regionlib.RegionError, figlib.FigureError, KeyError) as e:
         print(f"✗ {e}", file=sys.stderr)
         return 1
 
@@ -182,17 +203,24 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  行数を変えた区画: {line}")
     for line in report["padded"]:
         print(f"  空行で埋めた区画: {line}")
+    for line in report.get("figures", []):
+        print(f"  図: {line}")
+    for line in report.get("warnings", []):
+        print(f"  ⚠ {line}")
     if report["blank"]:
         print(f"  教材データに無いので空欄にした区画: {'、'.join(report['blank'])}")
     over = False
     for name, (before, after) in report["amount"].items():
         ratio = after / before * 100 if before else 0
-        mark = "⚠ " if ratio > 100 else ""
-        over |= ratio > 100
-        print(f"  {mark}分量（{name}）: 原本 {before:.0f} 行分 → 今回 {after:.0f} 行分（{ratio:.0f}%）")
+        print(f"  分量（{name}）: 原本 {before:.0f} 行分 → 今回 {after:.0f} 行分（{ratio:.0f}%）")
+    names = list(report["amount"]) or [str(k + 1) for k in range(len(report["widths"]))]
+    for name, used in zip(names, report["widths"]):
+        mark = "⚠ " if used > volume.PAGE_WIDTH_MM - volume.SAFETY_MM else ""
+        over |= bool(mark)
+        print(f"  {mark}横幅（{name}）: {used:.0f}mm／{volume.PAGE_WIDTH_MM:.0f}mm")
     if over:
-        print("  原本より多い面があります。紙面からはみ出すおそれがあるので、行を減らすか"
-              "短くしてください。最終確認は Word で。")
+        print(f"  横幅が本文領域（余裕 {volume.SAFETY_MM:.0f}mm を引いた分）を超える面があります。"
+              "次のページへあふれるおそれがあるので、行を減らすか短くしてください。最終確認は Word で。")
     return 0
 
 

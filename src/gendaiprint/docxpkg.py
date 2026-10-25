@@ -33,6 +33,7 @@ CANONICAL_NS = {
     "wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
     "wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
     "wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+    "asvg": "http://schemas.microsoft.com/office/drawing/2016/SVG/main",
 }
 
 
