@@ -221,6 +221,34 @@ class Figure:
         self.add(f'<rect x="{bx - 7:.1f}" y="{by - (3 if ty > 0 else -1):.1f}" width="14" height="3" fill="#FFFFFF"/>')
         self.text(x, y, s, size=size)
 
+    def phone(self, x, y, w, h, rows, size=22):
+        """スマートフォン。(x, y) は中心。rows は画面の文字（(文字, True) は答え）。"""
+        self.box(x, y, w, h, r=w * 0.12, width=4)
+        self.box(x, y, w * 0.84, h * 0.78, r=6, fill="#FFFFFF", width=2)
+        self.add(f'<circle cx="{x:.1f}" cy="{y + h * 0.445:.1f}" r="{w * 0.05:.1f}" fill="none"'
+                 f' stroke="{INK}" stroke-width="2"/>')
+        self.lines(x, y, rows, size=size, gap=1.45)
+
+    def meter(self, x, y, s=1.0, value="３"):
+        """腕に付ける測定器（痛みメーター）。(x, y) は表示の中心。"""
+        self.add(f'<rect x="{x - 60 * s:.1f}" y="{y - 16 * s:.1f}" width="{120 * s:.1f}" height="{32 * s:.1f}"'
+                 f' rx="{10 * s:.1f}" fill="{LIGHT}" stroke="{INK}" stroke-width="2.5"/>')       # バンド
+        self.box(x, y, 64 * s, 52 * s, r=8 * s, width=3.5)
+        self.text(x, y + 2 * s, value, size=40 * s, bold=True)
+        self.text(x, y - 34 * s, "痛み 0〜100", size=18 * s)
+
+    def motion(self, x, y, s=1.0):
+        """走っている勢いの線（人の左側に置く）。"""
+        for k, dy in enumerate((0, 16, 32)):
+            self.line(x - (24 + 6 * k) * s, y + dy * s, x - 4 * s, y + dy * s, width=2.5)
+
+    def clock(self, x, y, r=26, hours=3):
+        """時計（睡眠時間などに）。"""
+        self.add(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="#FFFFFF" stroke="{INK}" stroke-width="3"/>')
+        self.line(x, y, x, y - r * 0.7, width=3)
+        ang = math.radians(hours * 30 - 90)
+        self.line(x, y, x + r * 0.5 * math.cos(ang), y + r * 0.5 * math.sin(ang), width=4)
+
     # ------------------------------------------------------------ 書き出し
     def svg(self, answer_colour: str) -> str:
         body = "\n".join(self.parts).replace("{ANSWER}", answer_colour)

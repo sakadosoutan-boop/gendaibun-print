@@ -18,6 +18,7 @@
 ## 構成
 - `src/gendaiprint/` … docxpkg（入出力）/ rpr（書式差分・名前付き書式）/ markup（記法）/ slots（目印・流し込み）/ regions（区画の行数増減）/ volume（分量と横幅の見積もり）/ figures（図の差し込み）
 - `src/build.py` … 教材データ＋テンプレート → docx（横幅の見積もり・図の差し込み・解答表示の切り替え付き）
+- `template/授業プリント`（授業プリント型）と `template/ワークシート`（体感ワークシート型）。どちらも同じ原本から、それぞれの recipe.json で作る。verify は両方を確かめる。
 - `tools/` … make_template（原本＋レシピ→テンプレート）/ check（表記チェック）/ zukai（図解・挿絵の SVG 部品）
 - `figures/<教材>/` … make_figures.py と、描いた図（SVG・PNG、_空欄・_黒 の版）
 

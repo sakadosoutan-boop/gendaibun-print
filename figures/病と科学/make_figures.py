@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""『病と科学』授業プリントの図解（①〜④ に 1 枚ずつ）を描く。
+"""『病と科学』授業プリントの図解（①〜④ に 1 枚ずつ）と、体感ワークシートの挿絵を描く。
 
     python3 figures/病と科学/make_figures.py
 
@@ -17,7 +17,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1] / "tools"))
 
-from zukai import Figure  # noqa: E402
+from zukai import GRAY, Figure  # noqa: E402
 
 
 def fig1() -> Figure:
@@ -132,8 +132,73 @@ def fig4() -> Figure:
     return f
 
 
+# ---------------------------------------------------------------- 体感ワークシート用の挿絵
+def ws2() -> Figure:
+    """ワーク２ 健診に走ってきたＡさん（23mm 幅）。"""
+    f = Figure(230, 700)
+    cx = 115
+    f.text(cx, 30, "健診の日のＡさん", size=22, bold=True)
+    f.clock(60, 110, r=28, hours=3)
+    f.lines(150, 110, ["睡眠", "３時間"], size=22)
+    f.balloon(cx, 215, 200, 54, "眠いけど元気！", tail=(0, 1), size=20)
+    f.person(cx + 10, 300, s=1.2)
+    f.motion(cx - 25, 380, s=1.1)
+    f.text(cx, 520, "走って", size=22)
+    f.text(cx, 550, "会場へ", size=22)
+    f.text(cx, 610, "白衣の前で", size=20)
+    f.text(cx, 640, "どきどき", size=20)
+    return f
+
+
+def ws4() -> Figure:
+    """ワーク４ 痛みメーター（31mm 幅）。"""
+    f = Figure(310, 900)
+    cx = 155
+    f.text(cx, 30, "痛みメーター", size=24, bold=True)
+    f.line(30, 55, 280, 55, width=2)
+    f.balloon(cx, 120, 260, 56, "すごく痛い…", tail=(0, 1), size=22)
+    f.person(cx, 200, s=1.25, pain=True)
+    f.meter(cx, 480, s=1.5, value="３")
+    f.arrow(cx, 545, cx, 600)
+    f.box(cx, 690, 280, 150, r=14)
+    f.lines(cx, 690, ["「そんなに", "痛くないはず。", "教室に戻りなさい」"], size=22)
+    f.text(cx, 820, "感覚と数字、", size=22)
+    f.text(cx, 855, "どちらを信じる？", size=22, bold=True)
+    return f
+
+
+def ws5_app() -> Figure:
+    """ワーク５ 未来がわかる診断アプリ（27mm 幅）。"""
+    f = Figure(270, 800)
+    cx = 135
+    f.text(cx, 30, "診断アプリ", size=24, bold=True)
+    f.phone(cx, 380, 230, 600, ["遺伝子から", "わかる", "", "40歳までに", "かかりやすい", "病気", "", "Ａ病　32％",
+                                 "Ｂ病　18％", "Ｃ病　 5％", "", "結果を", "共有しますか？"], size=20)
+    f.text(cx, 740, "使う？使わない？", size=22, bold=True)
+    return f
+
+
+def ws5_scale() -> Figure:
+    """ワーク５ 付せんを貼る天秤（55mm 幅）。"""
+    f = Figure(550, 1250)
+    cx = 275
+    f.text(cx, 35, "科学（医療）の天秤", size=28, bold=True)
+    f.line(40, 62, 510, 62, width=2)
+    f.scale(cx, 130, s=2.2)
+    f.text(cx - 155, 260, "恩恵（功）", size=26, bold=True)
+    f.text(cx + 155, 260, "弊害・心配（罪）", size=26, bold=True)
+    f.box(cx - 135, 700, 240, 800, r=12, dash=True)
+    f.box(cx + 135, 700, 240, 800, r=12, dash=True)
+    f.lines(cx - 135, 700, ["付せんを", "貼る"], size=22, colour=GRAY)
+    f.lines(cx + 135, 700, ["付せんを", "貼る"], size=22, colour=GRAY)
+    f.text(cx, 1160, "傾きを決めるのは、だれ？", size=26, bold=True)
+    return f
+
+
 FIGURES = {"図1_科学崇拝への道": fig1, "図2_病人と病気の切り離し": fig2,
-           "図3_痛みの否定と依存": fig3, "図4_科学の功罪": fig4}
+           "図3_痛みの否定と依存": fig3, "図4_科学の功罪": fig4,
+           "ワーク2_健診のＡさん": ws2, "ワーク4_痛みメーター": ws4,
+           "ワーク5_診断アプリ": ws5_app, "ワーク5_天秤": ws5_scale}
 
 if __name__ == "__main__":
     png = "--no-png" not in sys.argv

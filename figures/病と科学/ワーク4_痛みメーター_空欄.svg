@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.0mm" height="90.0mm" viewBox="0 0 310 900">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="155.0" y="38.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000" font-weight="bold">痛みメーター</text>
+<line x1="30.0" y1="55.0" x2="280.0" y2="55.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<rect x="25.0" y="92.0" width="260.0" height="56.0" rx="28.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<path d="M149.0,148.0 L155.0,164.0 L161.0,148.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="148.0" y="145.0" width="14" height="3" fill="#FFFFFF"/>
+<text x="155.0" y="127.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">すごく痛い…</text>
+<circle cx="155.0" cy="200.0" r="17.5" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M130.0,287.5 L130.0,237.5 Q130.0,222.5 145.0,222.5 L165.0,222.5 Q180.0,222.5 180.0,237.5 L180.0,287.5 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="143.8" y1="287.5" x2="143.8" y2="332.5" stroke="#000000" stroke-width="6.0" stroke-linecap="round"/>
+<line x1="166.2" y1="287.5" x2="166.2" y2="332.5" stroke="#000000" stroke-width="6.0" stroke-linecap="round"/>
+<path d="M130.0,240.0 Q145.0,267.5 162.5,262.5" fill="none" stroke="#000000" stroke-width="6.0" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M190.0,250.0 l7.5,-5.0 l2.5,7.5 l8.8,-6.2" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M192.5,267.5 l7.5,-5.0 l2.5,7.5 l8.8,-6.2" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M185.0,285.0 l7.5,-5.0 l2.5,7.5 l8.8,-6.2" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M147.5,196.2 l5.0,2.5 M162.5,196.2 l-5.0,2.5 M148.8,208.8 q6.2,-5.0 12.5,0" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="65.0" y="456.0" width="180.0" height="48.0" rx="15.0" fill="#EDEDED" stroke="#000000" stroke-width="2.5"/>
+<rect x="107.0" y="441.0" width="96.0" height="78.0" rx="12.0" fill="#FFFFFF" stroke="#000000" stroke-width="3.5"/>
+<text x="155.0" y="504.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="60.0" text-anchor="middle" fill="#000000" font-weight="bold">３</text>
+<text x="155.0" y="438.7" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="27.0" text-anchor="middle" fill="#000000">痛み 0〜100</text>
+<line x1="155.0" y1="545.0" x2="155.0" y2="584.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M155.0,600.0 L146.2,584.0 L163.8,584.0 Z" fill="#000000"/>
+<rect x="15.0" y="615.0" width="280.0" height="150.0" rx="14" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="155.0" y="668.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">「そんなに</text>
+<text x="155.0" y="697.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">痛くないはず。</text>
+<text x="155.0" y="727.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">教室に戻りなさい」</text>
+<text x="155.0" y="827.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">感覚と数字、</text>
+<text x="155.0" y="862.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000" font-weight="bold">どちらを信じる？</text>
+</svg>

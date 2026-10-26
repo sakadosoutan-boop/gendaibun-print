@@ -1,0 +1,233 @@
+{
+  "説明": "書式表。原本に残る細かな書式の差（書式NN）と、スロットごとの上書き。教材データで使う名前付きの書式（囲み・太字・囲み太字・大・小・黒）は src/gendaiprint/rpr.py にある。",
+  "共通": {
+    "書式01": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />"
+      }
+    },
+    "書式02": {
+      "set": {
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      }
+    },
+    "書式03": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />"
+      }
+    },
+    "書式04": {
+      "set": {
+        "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"000000\" />"
+      }
+    },
+    "書式05": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      }
+    },
+    "書式06": {
+      "unset": [
+        "b",
+        "bCs"
+      ]
+    },
+    "書式07": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />"
+      }
+    },
+    "書式08": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />"
+      }
+    },
+    "書式09": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      }
+    },
+    "書式10": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:hint=\"eastAsia\" />"
+      }
+    },
+    "書式11": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      },
+      "unset": [
+        "color"
+      ]
+    },
+    "書式12": {
+      "unset": [
+        "color"
+      ]
+    },
+    "書式13": {
+      "set": {
+        "u": "<w:u xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" />"
+      },
+      "unset": [
+        "color"
+      ]
+    },
+    "書式14": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      }
+    },
+    "書式15": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />"
+      },
+      "unset": [
+        "bdr"
+      ]
+    },
+    "書式16": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />"
+      },
+      "unset": [
+        "bdr"
+      ]
+    },
+    "書式17": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />"
+      },
+      "unset": [
+        "color"
+      ]
+    },
+    "書式18": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bCs": "<w:bCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      }
+    },
+    "書式19": {
+      "set": {
+        "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
+        "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"000000\" />"
+      }
+    },
+    "書式20": {
+      "unset": [
+        "color",
+        "u"
+      ]
+    },
+    "書式21": {
+      "set": {
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      },
+      "unset": [
+        "color"
+      ]
+    },
+    "書式22": {
+      "unset": [
+        "bdr"
+      ]
+    },
+    "書式23": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      }
+    },
+    "書式24": {
+      "set": {
+        "sz": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"22\" />",
+        "szCs": "<w:szCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"22\" />"
+      }
+    },
+    "書式25": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />"
+      }
+    },
+    "書式26": {
+      "set": {
+        "sz": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"18\" />",
+        "szCs": "<w:szCs xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"18\" />"
+      }
+    },
+    "書式27": {
+      "set": {
+        "b": "<w:b xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />",
+        "bdr": "<w:bdr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" w:sz=\"4\" w:space=\"0\" w:color=\"auto\" />"
+      },
+      "unset": [
+        "color"
+      ]
+    }
+  },
+  "スロット別": {
+    "s0024": {
+      "u": {
+        "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+          "u": "<w:u xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"single\" />"
+        }
+      }
+    },
+    "s0035": {
+      "ans": {
+        "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
+          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
+        }
+      }
+    },
+    "s0036": {
+      "ans": {
+        "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
+        }
+      }
+    },
+    "s0038": {
+      "ans": {
+        "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
+        }
+      }
+    },
+    "s0043": {
+      "ans": {
+        "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
+          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
+        }
+      }
+    },
+    "s0081": {
+      "ans": {
+        "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
+        }
+      }
+    }
+  }
+}

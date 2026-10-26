@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.0mm" height="70.0mm" viewBox="0 0 230 700">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="115.0" y="37.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000" font-weight="bold">健診の日のＡさん</text>
+<circle cx="60.0" cy="110.0" r="28.0" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<line x1="60.0" y1="110.0" x2="60.0" y2="90.4" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<line x1="60.0" y1="110.0" x2="74.0" y2="110.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<text x="150.0" y="103.1" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">睡眠</text>
+<text x="150.0" y="132.8" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">３時間</text>
+<rect x="15.0" y="188.0" width="200.0" height="54.0" rx="27.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<path d="M109.0,242.0 L115.0,258.0 L121.0,242.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="108.0" y="239.0" width="14" height="3" fill="#FFFFFF"/>
+<text x="115.0" y="222.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="20" text-anchor="middle" fill="#000000">眠いけど元気！</text>
+<circle cx="125.0" cy="300.0" r="16.8" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M101.0,384.0 L101.0,336.0 Q101.0,321.6 115.4,321.6 L134.6,321.6 Q149.0,321.6 149.0,336.0 L149.0,384.0 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="114.2" y1="384.0" x2="114.2" y2="427.2" stroke="#000000" stroke-width="5.8" stroke-linecap="round"/>
+<line x1="135.8" y1="384.0" x2="135.8" y2="427.2" stroke="#000000" stroke-width="5.8" stroke-linecap="round"/>
+<line x1="63.6" y1="380.0" x2="85.6" y2="380.0" stroke="#000000" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="57.0" y1="397.6" x2="85.6" y2="397.6" stroke="#000000" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="50.4" y1="415.2" x2="85.6" y2="415.2" stroke="#000000" stroke-width="2.5" stroke-linecap="round"/>
+<text x="115.0" y="527.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">走って</text>
+<text x="115.0" y="557.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">会場へ</text>
+<text x="115.0" y="617.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="20" text-anchor="middle" fill="#000000">白衣の前で</text>
+<text x="115.0" y="647.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="20" text-anchor="middle" fill="#000000">どきどき</text>
+</svg>
