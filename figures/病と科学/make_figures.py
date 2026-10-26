@@ -133,6 +133,51 @@ def fig4() -> Figure:
 
 
 # ---------------------------------------------------------------- 体感ワークシート用の挿絵
+def ws0_gauge() -> Figure:
+    """ワーク０ 科学信仰度計（31mm 幅）。体温計の形。
+
+    6 問の合計点（6〜24 点）の高さに、読む前は鉛筆、読み終えたら赤で印を付ける。
+    目盛りの横に、合計点から決まる 4 つのタイプを書いておく。
+    信仰度を「数値」で測ることそのものが、第二段の「数値化」と同じだと最後に気づかせる仕掛けでもある。
+    """
+    f = Figure(310, 1300)
+    f.text(155, 30, "科学信仰度計", size=26, bold=True)
+    f.line(20, 55, 290, 55, width=2)
+    tube_x, top, bottom = 62, 150, 1110          # 24 点が top、6 点が bottom
+    unit = (bottom - top) / 18
+
+    def y_of(points: float) -> float:
+        return bottom - (points - 6) * unit
+
+    f.text(tube_x, 105, "100%", size=18)
+    f.add(f'<rect x="{tube_x - 18}" y="{top - 30}" width="36" height="{bottom - top + 60}" rx="18"'
+          f' fill="#FFFFFF" stroke="#000000" stroke-width="3"/>')
+    f.add(f'<circle cx="{tube_x}" cy="{bottom + 75}" r="38" fill="#BFBFBF" stroke="#000000" stroke-width="3"/>')
+    f.add(f'<rect x="{tube_x - 15}" y="{bottom + 20}" width="30" height="30" fill="#BFBFBF"/>')
+    f.text(tube_x, bottom + 75, "0%", size=18)
+    for p in range(6, 25):
+        y = y_of(p)
+        big = p in (6, 9, 12, 15, 18, 21, 24)
+        f.line(tube_x - 18, y, tube_x - (6 if big else 11), y, width=2 if big else 1)
+        if big:
+            f.text(tube_x - 26, y, str(p), size=18, anchor="end")
+    f.text(tube_x - 26, top - 52, "合計", size=16, anchor="end")
+    zones = [(21, 24, "どっぷり派", ["数値と医師を", "信じきる"]),
+             (16, 20, "科学たより派", ["まず科学に", "たよる"]),
+             (11, 15, "バランス派", ["科学も感覚も", "使い分ける"]),
+             (6, 10, "自分の感覚派", ["体の声を", "大事にする"])]
+    for low, high, name, note in zones:
+        upper, lower = y_of(high + 0.5), y_of(low - 0.5)
+        if low != 6:
+            f.line(tube_x + 22, lower, 300, lower, width=1.5, dash=True)
+        mid = (upper + lower) / 2
+        f.text(190, mid - 40, name, size=22, bold=True)
+        f.lines(190, mid + 10, note, size=18, gap=1.3)
+    f.line(tube_x + 22, y_of(24.5), 300, y_of(24.5), width=1.5, dash=True)
+    f.text(155, 1255, "前＝鉛筆　後＝赤", size=20, bold=True)
+    return f
+
+
 def ws2() -> Figure:
     """ワーク２ 健診に走ってきたＡさん（23mm 幅）。"""
     f = Figure(230, 700)
@@ -197,7 +242,7 @@ def ws5_scale() -> Figure:
 
 FIGURES = {"図1_科学崇拝への道": fig1, "図2_病人と病気の切り離し": fig2,
            "図3_痛みの否定と依存": fig3, "図4_科学の功罪": fig4,
-           "ワーク2_健診のＡさん": ws2, "ワーク4_痛みメーター": ws4,
+           "ワーク0_科学信仰度計": ws0_gauge, "ワーク2_健診のＡさん": ws2, "ワーク4_痛みメーター": ws4,
            "ワーク5_診断アプリ": ws5_app, "ワーク5_天秤": ws5_scale}
 
 if __name__ == "__main__":
