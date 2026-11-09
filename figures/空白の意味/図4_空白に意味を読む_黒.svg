@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47.0mm" height="150.0mm" viewBox="0 0 470 1500">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="235.0" y="45.1" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="28" text-anchor="middle" fill="#000000" font-weight="bold">空白に意味を読む</text>
+<line x1="40.0" y1="62.0" x2="430.0" y2="62.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<rect x="85.0" y="115.0" width="300.0" height="70.0" rx="12" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="235.0" y="159.4" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="26" text-anchor="middle" fill="#000000">何もない空白</text>
+<line x1="235.0" y1="195.0" x2="235.0" y2="239.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<path d="M235.0,255.0 L226.2,239.0 L243.8,239.0 Z" fill="#000000"/>
+<text x="305.0" y="232.2" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="20" text-anchor="middle" fill="#000000">かえって</text>
+<rect x="25.0" y="275.0" width="420.0" height="90.0" rx="12" fill="#FFFFFF" stroke="#000000" stroke-width="4"/>
+<text x="74.2" y="328.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000">豊かな</text>
+<text x="146.2" y="328.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000">〔</text>
+<text x="395.8" y="328.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="end" fill="#000000">〕</text>
+<text x="271.0" y="328.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">イマジネーション</text>
+<text x="98.2" y="418.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000" font-weight="bold">＝</text>
+<text x="122.2" y="418.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000">〔</text>
+<text x="227.8" y="418.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="end" fill="#000000">〕</text>
+<text x="175.0" y="418.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">逆説</text>
+<text x="227.8" y="418.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="start" fill="#000000" font-weight="bold">的な絵画表現</text>
+<line x1="40.0" y1="470.0" x2="430.0" y2="470.0" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="10,7"/>
+<text x="235.0" y="513.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000" font-weight="bold">身の回りの「空白」</text>
+<path d="M108.0,760.0 Q93.6,724.0 114.0,688.0 L126.0,688.0 Q146.4,724.0 132.0,760.0 Z" fill="#EDEDED" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120.0,688.0 Q127.2,646.0 115.2,610.0" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="126.0" cy="601.6" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+<circle cx="118.5" cy="611.9" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+<circle cx="106.5" cy="607.9" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+<circle cx="106.5" cy="595.3" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+<circle cx="118.5" cy="591.3" r="7.2" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+<text x="120.0" y="809.3" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#000000">一輪挿し</text>
+<text x="120.0" y="833.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#000000">花のまわりの空間</text>
+<path d="M265.0,650.0 q42.5,-6.0 85.0,0 t85.0,0" fill="none" stroke="#BFBFBF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M265.0,665.0 q42.5,-6.0 85.0,0 t85.0,0" fill="none" stroke="#BFBFBF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M265.0,680.0 q42.5,-6.0 85.0,0 t85.0,0" fill="none" stroke="#BFBFBF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M265.0,695.0 q42.5,-6.0 85.0,0 t85.0,0" fill="none" stroke="#BFBFBF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M265.0,710.0 q42.5,-6.0 85.0,0 t85.0,0" fill="none" stroke="#BFBFBF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="307.5" cy="680.0" rx="22.0" ry="16.0" fill="#555555" stroke="#000000" stroke-width="1.5"/>
+<ellipse cx="384.0" cy="680.0" rx="16.0" ry="12.0" fill="#555555" stroke="#000000" stroke-width="1.5"/>
+<ellipse cx="404.4" cy="680.0" rx="9.0" ry="7.0" fill="#555555" stroke="#000000" stroke-width="1.5"/>
+<text x="350.0" y="809.3" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#000000">石庭</text>
+<text x="350.0" y="833.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#000000">白砂の余白</text>
+<circle cx="110.0" cy="960.0" r="11.2" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M94.0,1016.0 L94.0,984.0 Q94.0,974.4 103.6,974.4 L116.4,974.4 Q126.0,974.4 126.0,984.0 L126.0,1016.0 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="102.8" y1="1016.0" x2="102.8" y2="1044.8" stroke="#000000" stroke-width="4.2" stroke-linecap="round"/>
+<line x1="117.2" y1="1016.0" x2="117.2" y2="1044.8" stroke="#000000" stroke-width="4.2" stroke-linecap="round"/>
+<circle cx="230.0" cy="960.0" r="11.2" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M214.0,1016.0 L214.0,984.0 Q214.0,974.4 223.6,974.4 L236.4,974.4 Q246.0,974.4 246.0,984.0 L246.0,1016.0 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="222.8" y1="1016.0" x2="222.8" y2="1044.8" stroke="#000000" stroke-width="4.2" stroke-linecap="round"/>
+<line x1="237.2" y1="1016.0" x2="237.2" y2="1044.8" stroke="#000000" stroke-width="4.2" stroke-linecap="round"/>
+<rect x="115.0" y="883.0" width="110.0" height="44.0" rx="22.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5"/>
+<path d="M164.0,927.0 L170.0,943.0 L176.0,927.0" fill="#FFFFFF" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="163.0" y="924.0" width="14" height="3" fill="#FFFFFF"/>
+<text x="170.0" y="912.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">……</text>
+<text x="170.0" y="1099.3" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#000000">会話の「間」</text>
+<text x="170.0" y="1123.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#000000">沈黙も伝わる</text>
+<rect x="275.0" y="935.0" width="150.0" height="150.0" rx="6" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="3" stroke-dasharray="10,7"/>
+<text x="350.0" y="1003.7" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="20" text-anchor="middle" fill="#BFBFBF">ほかにも</text>
+<text x="350.0" y="1030.7" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="20" text-anchor="middle" fill="#BFBFBF">探そう</text>
+<rect x="25.0" y="1185.0" width="420.0" height="230.0" rx="16" fill="#FFFFFF" stroke="#000000" stroke-width="4"/>
+<text x="235.0" y="1233.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000" font-weight="bold">日本の美意識の一端</text>
+<text x="235.0" y="1287.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">空白地帯を</text>
+<text x="120.6" y="1332.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="start" fill="#000000">情報の</text>
+<text x="186.6" y="1332.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="start" fill="#000000">〔</text>
+<text x="327.4" y="1332.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="end" fill="#000000">〕</text>
+<text x="257.0" y="1332.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">ゼロ地帯</text>
+<text x="327.4" y="1332.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="start" fill="#000000">と</text>
+<text x="235.0" y="1377.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">見なさない</text>
+</svg>

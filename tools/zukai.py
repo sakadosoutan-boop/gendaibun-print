@@ -249,6 +249,128 @@ class Figure:
         ang = math.radians(hours * 30 - 90)
         self.line(x, y, x + r * 0.5 * math.cos(ang), y + r * 0.5 * math.sin(ang), width=4)
 
+    # ------------------------------------------------------------ 自己診断の目盛り
+    @classmethod
+    def gauge(cls, title: str, zones: list, note: str = "前＝鉛筆　後＝赤") -> "Figure":
+        """体温計の形の目盛り（31mm 幅）。6 問×1〜4 点の合計（6〜24 点）の高さに印を付け、
+        横の 4 つのゾーンでタイプがわかる。zones は (下限, 上限, 名前, [説明の行]) を上から順に。"""
+        f = cls(310, 1300)
+        f.text(155, 30, title, size=26, bold=True)
+        f.line(20, 55, 290, 55, width=2)
+        tube_x, top, bottom = 62, 150, 1110          # 24 点が top、6 点が bottom
+        unit = (bottom - top) / 18
+
+        def y_of(points: float) -> float:
+            return bottom - (points - 6) * unit
+
+        f.text(tube_x, 105, "100%", size=18)
+        f.add(f'<rect x="{tube_x - 18}" y="{top - 30}" width="36" height="{bottom - top + 60}" rx="18"'
+              f' fill="#FFFFFF" stroke="#000000" stroke-width="3"/>')
+        f.add(f'<circle cx="{tube_x}" cy="{bottom + 75}" r="38" fill="#BFBFBF" stroke="#000000" stroke-width="3"/>')
+        f.add(f'<rect x="{tube_x - 15}" y="{bottom + 20}" width="30" height="30" fill="#BFBFBF"/>')
+        f.text(tube_x, bottom + 75, "0%", size=18)
+        for p in range(6, 25):
+            y = y_of(p)
+            big = p in (6, 9, 12, 15, 18, 21, 24)
+            f.line(tube_x - 18, y, tube_x - (6 if big else 11), y, width=2 if big else 1)
+            if big:
+                f.text(tube_x - 26, y, str(p), size=18, anchor="end")
+        f.text(tube_x - 26, top - 52, "合計", size=16, anchor="end")
+        for low, high, name, lines in zones:
+            upper, lower = y_of(high + 0.5), y_of(low - 0.5)
+            if low != 6:
+                f.line(tube_x + 22, lower, 300, lower, width=1.5, dash=True)
+            mid = (upper + lower) / 2
+            f.text(190, mid - 40, name, size=22, bold=True)
+            f.lines(190, mid + 10, lines, size=18, gap=1.3)
+        f.line(tube_x + 22, y_of(24.5), 300, y_of(24.5), width=1.5, dash=True)
+        f.text(155, 1255, note, size=20, bold=True)
+        return f
+
+    # ------------------------------------------------------------ 美術・日本の美の挿絵
+    def pine(self, x, y, s=1.0, style="fine", tone=INK):
+        """松。(x, y) は根もと。style: fine＝精緻（針葉を一本ずつ）、rough＝荒い筆遣い、mist＝霞む松。"""
+        h = 230 * s
+        if style == "fine":
+            self.path(f"M{x:.1f},{y:.1f} C{x - 12 * s:.1f},{y - h * 0.4:.1f} {x + 16 * s:.1f},{y - h * 0.6:.1f} "
+                      f"{x + 4 * s:.1f},{y - h:.1f}", width=5 * s)
+            for k, (dy, half) in enumerate(((0.25, 38), (0.45, 46), (0.65, 40), (0.85, 30), (1.0, 18))):
+                cy = y - h * dy
+                cx = x + (6 if k % 2 else -4) * s
+                for n in range(-int(half), int(half) + 1, 3):
+                    px = cx + n * s
+                    spread = (1 - abs(n) / half) * 14 * s + 4 * s
+                    self.line(px, cy, px + 3 * s, cy - spread, width=1.1)
+                    self.line(px, cy, px - 3 * s, cy + spread * 0.5, width=1.1)
+            return
+        # 荒い筆遣い・霞む松: 幹を太い一筆で、葉の固まりを短い筆の打ち込みの集まりで描く
+        op = {"rough": 0.88, "mist": 0.32}[style]
+        grey = "#1E1E1E" if style == "rough" else "#6E6E6E"
+        self.add(f'<g opacity="{op}" stroke="{grey}" fill="none" stroke-linecap="round" stroke-linejoin="round">')
+        self.add(f'<path d="M{x:.1f},{y:.1f} C{x - 14 * s:.1f},{y - h * 0.35:.1f} {x + 16 * s:.1f},{y - h * 0.62:.1f} '
+                 f'{x + 3 * s:.1f},{y - h:.1f}" stroke-width="{8 * s:.1f}"/>')
+        clusters = ((0.42, -34, 30), (0.56, 30, 34), (0.72, -26, 28), (0.86, 22, 24), (0.98, -4, 18))
+        for k, (dy, dx, w) in enumerate(clusters):
+            cy = y - h * dy
+            bx = x + (3 if k % 2 else -2) * s
+            self.add(f'<path d="M{bx:.1f},{cy + 6 * s:.1f} L{bx + dx * s * 0.8:.1f},{cy:.1f}" stroke-width="{3 * s:.1f}"/>')
+            for n in range(9):                   # 筆の打ち込み（扇形に並べた短い太線）
+                t = (n - 4) / 4
+                px = bx + dx * s + t * w * s
+                py = cy - (1 - t * t) * 10 * s
+                self.add(f'<path d="M{px - 7 * s:.1f},{py + 3 * s:.1f} l{14 * s:.1f},{-6 * s:.1f}" '
+                         f'stroke-width="{6 * s:.1f}"/>')
+        self.add('</g>')
+
+    def mountain(self, x, y, w, h):
+        """霞の中の白い山（霊峰）。輪郭だけを淡く描く。"""
+        self.path(f"M{x - w / 2:.1f},{y:.1f} Q{x - w * 0.15:.1f},{y - h * 0.7:.1f} {x:.1f},{y - h:.1f} "
+                  f"Q{x + w * 0.2:.1f},{y - h * 0.6:.1f} {x + w / 2:.1f},{y:.1f}", stroke="#9A9A9A", width=2)
+
+    def kanizsa(self, cx, cy, size):
+        """カニッツァの三角形（主観的輪郭）。描かれていない白い三角形が見える。"""
+        def tri(rot):
+            return [(cx + size * math.cos(math.radians(rot + 120 * k)),
+                     cy + size * math.sin(math.radians(rot + 120 * k))) for k in range(3)]
+        r = size * 0.32
+        for vx, vy in tri(-90):              # 口を中心へ向けた 3 つの円
+            to_c = math.degrees(math.atan2(cy - vy, cx - vx))
+            a1, a2 = math.radians(to_c - 30), math.radians(to_c + 30)
+            x1, y1 = vx + r * math.cos(a1), vy + r * math.sin(a1)
+            x2, y2 = vx + r * math.cos(a2), vy + r * math.sin(a2)
+            self.add(f'<path d="M{vx:.1f},{vy:.1f} L{x2:.1f},{y2:.1f} A{r:.1f},{r:.1f} 0 1 1 {x1:.1f},{y1:.1f} Z" fill="{INK}"/>')
+        pts = tri(90)                        # 逆向きの三角形は、角のまわりだけ線を描く
+        for k, (vx, vy) in enumerate(pts):
+            for ox, oy in (pts[(k + 1) % 3], pts[(k + 2) % 3]):
+                self.line(vx, vy, vx + (ox - vx) * 0.3, vy + (oy - vy) * 0.3, width=3)
+
+    def bowl(self, x, y, s=1.0):
+        """空っぽの器。(x, y) は器の口の中心。"""
+        self.path(f"M{x - 50 * s:.1f},{y:.1f} Q{x - 46 * s:.1f},{y + 48 * s:.1f} {x:.1f},{y + 50 * s:.1f} "
+                  f"Q{x + 46 * s:.1f},{y + 48 * s:.1f} {x + 50 * s:.1f},{y:.1f}", fill="#FFFFFF", width=3)
+        self.ellipse(x, y, 50 * s, 10 * s, width=3)
+        self.box(x, y + 56 * s, 40 * s, 10 * s, r=3)
+
+    def vase(self, x, y, s=1.0):
+        """一輪挿し。(x, y) は花器の底。"""
+        self.path(f"M{x - 10 * s:.1f},{y:.1f} Q{x - 22 * s:.1f},{y - 30 * s:.1f} {x - 5 * s:.1f},{y - 60 * s:.1f} "
+                  f"L{x + 5 * s:.1f},{y - 60 * s:.1f} Q{x + 22 * s:.1f},{y - 30 * s:.1f} {x + 10 * s:.1f},{y:.1f} Z",
+                  fill=LIGHT, width=2.5)
+        self.path(f"M{x:.1f},{y - 60 * s:.1f} Q{x + 6 * s:.1f},{y - 95 * s:.1f} {x - 4 * s:.1f},{y - 125 * s:.1f}", width=2.5)
+        for a in range(0, 360, 72):
+            px = x - 4 * s + 9 * s * math.cos(math.radians(a))
+            py = y - 132 * s + 9 * s * math.sin(math.radians(a))
+            self.add(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{6 * s:.1f}" fill="#FFFFFF" stroke="{INK}" stroke-width="2"/>')
+
+    def stone_garden(self, x, y, w, s=1.0):
+        """石庭（白砂に石がいくつか）。(x, y) は中央。"""
+        for k in range(5):
+            yy = y - 30 * s + k * 15 * s
+            self.path(f"M{x - w / 2:.1f},{yy:.1f} q{w / 4:.1f},{-6 * s:.1f} {w / 2:.1f},0 t{w / 2:.1f},0",
+                      stroke=GRAY, width=1.5)
+        for dx, rw, rh in ((-w * 0.25, 22, 16), (w * 0.2, 16, 12), (w * 0.32, 9, 7)):
+            self.ellipse(x + dx, y, rw * s, rh * s, fill="#555555", width=1.5)
+
     # ------------------------------------------------------------ 書き出し
     def svg(self, answer_colour: str) -> str:
         body = "\n".join(self.parts).replace("{ANSWER}", answer_colour)

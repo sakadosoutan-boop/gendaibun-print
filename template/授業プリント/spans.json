@@ -181,7 +181,7 @@
     }
   },
   "スロット別": {
-    "s0015": {
+    "s0019": {
       "u": {
         "set": {
           "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
@@ -189,7 +189,7 @@
         }
       }
     },
-    "s0026": {
+    "s0030": {
       "ans": {
         "set": {
           "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
@@ -197,15 +197,7 @@
         }
       }
     },
-    "s0027": {
-      "ans": {
-        "set": {
-          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
-          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
-        }
-      }
-    },
-    "s0029": {
+    "s0031": {
       "ans": {
         "set": {
           "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
@@ -216,12 +208,20 @@
     "s0033": {
       "ans": {
         "set": {
+          "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",
+          "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
+        }
+      }
+    },
+    "s0037": {
+      "ans": {
+        "set": {
           "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" />",
           "color": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:val=\"FF0000\" />"
         }
       }
     },
-    "s0071": {
+    "s0075": {
       "ans": {
         "set": {
           "rFonts": "<w:rFonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:ascii=\"UD Digi Kyokasho NK-R\" w:eastAsia=\"UD Digi Kyokasho NK-R\" w:hAnsi=\"UD Digi Kyokasho NK-R\" w:cs=\"UD Digi Kyokasho NK-R\" w:hint=\"eastAsia\" />",

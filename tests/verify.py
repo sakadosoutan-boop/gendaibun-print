@@ -39,7 +39,8 @@ import make_template  # noqa: E402
 
 # (テンプレート名, 教材データ)
 CASES = [("授業プリント", ROOT / "data" / "病と科学.json"),
-         ("ワークシート", ROOT / "data" / "ワークシート_病と科学.json")]
+         ("ワークシート", ROOT / "data" / "ワークシート_病と科学.json"),
+         ("授業プリント", ROOT / "data" / "空白の意味.json")]
 FAILED: list[str] = []
 
 
