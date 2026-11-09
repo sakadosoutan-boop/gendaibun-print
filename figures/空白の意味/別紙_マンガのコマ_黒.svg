@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.0mm" height="125.0mm" viewBox="0 0 300 1250">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="150.0" y="37.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000" font-weight="bold">コマのあいだに何が？</text>
+<rect x="15.0" y="70.0" width="270.0" height="520.0" rx="4" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<circle cx="120.0" cy="230.0" r="16.8" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<path d="M96.0,314.0 L96.0,266.0 Q96.0,251.6 110.4,251.6 L129.6,251.6 Q144.0,251.6 144.0,266.0 L144.0,314.0 Z" fill="#EDEDED" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="109.2" y1="314.0" x2="109.2" y2="357.2" stroke="#000000" stroke-width="5.8" stroke-linecap="round"/>
+<line x1="130.8" y1="314.0" x2="130.8" y2="357.2" stroke="#000000" stroke-width="5.8" stroke-linecap="round"/>
+<line x1="144.0" y1="270.0" x2="190.0" y2="200.0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+<circle cx="198" cy="188" r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="210.0" y="478.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000">えいっ</text>
+<text x="150.0" y="656.5" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="18" text-anchor="middle" fill="#BFBFBF">（コマのあいだ）</text>
+<rect x="15.0" y="710.0" width="270.0" height="520.0" rx="4" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<rect x="65.0" y="820.0" width="170.0" height="220.0" rx="2" fill="#FFFFFF" stroke="#000000" stroke-width="4"/>
+<line x1="150.0" y1="820.0" x2="150.0" y2="1040.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<line x1="65.0" y1="930.0" x2="235.0" y2="930.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<line x1="160.0" y1="915.0" x2="118.0" y2="859.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<line x1="160.0" y1="915.0" x2="195.0" y2="838.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<line x1="160.0" y1="915.0" x2="216.0" y2="957.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<line x1="160.0" y1="915.0" x2="111.0" y2="978.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<line x1="160.0" y1="915.0" x2="167.0" y2="999.0" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<text x="150.0" y="1180.1" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="28" text-anchor="middle" fill="#000000" font-weight="bold">ガシャーン！</text>
+</svg>

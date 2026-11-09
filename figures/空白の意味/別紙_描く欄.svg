@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.0mm" height="150.0mm" viewBox="0 0 340 1500">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="170.0" y="38.6" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="24" text-anchor="middle" fill="#000000" font-weight="bold">お題〔　　　　〕</text>
+<text x="170.0" y="97.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">①10秒・線３本だけ</text>
+<rect x="20.0" y="120.0" width="300.0" height="620.0" rx="10" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-dasharray="10,7"/>
+<text x="170.0" y="797.9" font-family="UD Digi Kyokasho NK-R, UD デジタル 教科書体 NK-R, IPAGothic, sans-serif" font-size="22" text-anchor="middle" fill="#000000">②１分かけて細かく</text>
+<rect x="20.0" y="820.0" width="300.0" height="620.0" rx="10" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-dasharray="10,7"/>
+</svg>

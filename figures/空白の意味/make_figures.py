@@ -142,8 +142,42 @@ def aesthetic() -> Figure:
     return f
 
 
+# ---------------------------------------------------------------- 別紙（体感ワークシート）用
+def sketch_frames() -> Figure:
+    """10 秒スケッチの描く欄（34mm 幅）。上が 10 秒・線 3 本、下が 1 分。"""
+    f = Figure(340, 1500)
+    cx = 170
+    f.text(cx, 30, "お題〔　　　　〕", size=24, bold=True)
+    f.text(cx, 90, "①10秒・線３本だけ", size=22)
+    f.box(cx, 430, 300, 620, r=10, dash=True)
+    f.text(cx, 790, "②１分かけて細かく", size=22)
+    f.box(cx, 1130, 300, 620, r=10, dash=True)
+    return f
+
+
+def manga() -> Figure:
+    """マンガのコマのあいだ（30mm 幅）。2 コマの間に何が起きたかを、読む側が補う。"""
+    f = Figure(300, 1250)
+    cx = 150
+    f.text(cx, 30, "コマのあいだに何が？", size=22, bold=True)
+    f.box(cx, 330, 270, 520, r=4, width=3)                 # 1 コマ目
+    f.person(cx - 30, 230, s=1.2)
+    f.line(cx - 6, 270, cx + 40, 200, width=4)             # 振りかぶった腕
+    f.add(f'<circle cx="{cx + 48}" cy="{188}" r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>')
+    f.text(cx + 60, 470, "えいっ", size=24)
+    f.text(cx, 650, "（コマのあいだ）", size=18, colour=GRAY)
+    f.box(cx, 970, 270, 520, r=4, width=3)                 # 2 コマ目
+    f.box(cx, 930, 170, 220, r=2, width=4)                 # 窓
+    f.line(cx, 820, cx, 1040, width=2)
+    f.line(cx - 85, 930, cx + 85, 930, width=2)
+    for dx, dy in ((-30, -40), (25, -55), (40, 30), (-35, 45), (5, 60)):
+        f.line(cx + 10, 915, cx + 10 + dx * 1.4, 915 + dy * 1.4, width=2)
+    f.text(cx, 1170, "ガシャーン！", size=28, bold=True)
+    return f
+
+
 FIGURES = {"図0_空白うめたい度の掛け軸": gauge, "図1_空っぽの器": bowl, "図2_松の描き比べ": pines,
-           "ワーク2_見えない三角形": kanizsa, "図3_松林図の画面構成": screen, "図4_空白に意味を読む": aesthetic}
+           "ワーク2_見えない三角形": kanizsa, "別紙_描く欄": sketch_frames, "別紙_マンガのコマ": manga, "図3_松林図の画面構成": screen, "図4_空白に意味を読む": aesthetic}
 
 if __name__ == "__main__":
     png = "--no-png" not in sys.argv
