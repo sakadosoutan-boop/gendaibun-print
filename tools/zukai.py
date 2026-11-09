@@ -287,6 +287,51 @@ class Figure:
         f.text(155, 1255, note, size=20, bold=True)
         return f
 
+    @classmethod
+    def scroll_gauge(cls, title: str, zones: list, note: str = "前＝鉛筆　後＝赤") -> "Figure":
+        """掛け軸の形の目盛り（gauge と同じ寸法・同じ点の目盛り）。
+
+        紙の部分を、下（6 点）の白から上（24 点）の濃墨まで、ゾーンごとに墨の濃さを変えて塗る。
+        「空白をうめたくなるほど墨が濃くなる」という見立てで、水墨画・白と黒の教材に合わせる。
+        zones は (下限, 上限, 名前, [説明の行], 墨の色) を上から順に。
+        """
+        f = cls(310, 1300)
+        f.text(155, 30, title, size=26, bold=True)
+        f.line(20, 55, 290, 55, width=2)
+        x0, x1, top, bottom = 40, 96, 150, 1110      # 24 点が top、6 点が bottom
+        unit = (bottom - top) / 18
+
+        def y_of(points: float) -> float:
+            return bottom - (points - 6) * unit
+
+        f.add(f'<rect x="{x0 - 14}" y="{top - 46}" width="{x1 - x0 + 28}" height="14" rx="5" fill="#5A4632"/>')   # 天の軸
+        f.line((x0 + x1) / 2, top - 46, (x0 + x1) / 2, top - 84, width=2)                                          # 掛け紐
+        f.add(f'<rect x="{x0 - 6}" y="{top - 32}" width="{x1 - x0 + 12}" height="{bottom - top + 64}" fill="#E8E2D2"'
+              f' stroke="#000000" stroke-width="2"/>')                                                             # 表装
+        for low, high, name, lines, ink in zones:
+            upper, lower = y_of(high + 0.5), y_of(low - 0.5)
+            f.add(f'<rect x="{x0}" y="{upper:.1f}" width="{x1 - x0}" height="{lower - upper:.1f}" fill="{ink}"/>')
+        f.add(f'<rect x="{x0}" y="{y_of(24.5):.1f}" width="{x1 - x0}" height="{y_of(5.5) - y_of(24.5):.1f}"'
+              f' fill="none" stroke="#000000" stroke-width="2.5"/>')
+        f.add(f'<rect x="{x0 - 16}" y="{bottom + 32}" width="{x1 - x0 + 32}" height="18" rx="9" fill="#5A4632"/>')  # 地の軸
+        for p in range(6, 25):
+            y = y_of(p)
+            big = p in (6, 9, 12, 15, 18, 21, 24)
+            f.line(x0 - 6, y, x0 - (16 if big else 11), y, width=2 if big else 1)
+            if big:
+                f.text(x0 - 18, y, str(p), size=16, anchor="end")
+        f.text(4, top - 60, "合計", size=14, anchor="start")
+        for low, high, name, lines, ink in zones:
+            upper, lower = y_of(high + 0.5), y_of(low - 0.5)
+            if low != 6:
+                f.line(x1 + 8, lower, 300, lower, width=1.5, dash=True)
+            mid = (upper + lower) / 2
+            f.text(200, mid - 40, name, size=22, bold=True)
+            f.lines(200, mid + 10, lines, size=18, gap=1.3)
+        f.lines(155, 1200, ["下は白（余白）", "上ほど濃墨"], size=17, gap=1.25)
+        f.text(155, 1255, note, size=20, bold=True)
+        return f
+
     # ------------------------------------------------------------ 美術・日本の美の挿絵
     def pine(self, x, y, s=1.0, style="fine", tone=INK):
         """松。(x, y) は根もと。style: fine＝精緻（針葉を一本ずつ）、rough＝荒い筆遣い、mist＝霞む松。"""
